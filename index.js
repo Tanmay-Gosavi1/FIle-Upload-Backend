@@ -6,7 +6,7 @@ require('dotenv').config()
 //Middlewares
 const fileUpload = require('express-fileupload')
 app.use(express.json())
-app.use(fileUpload({useTempFiles : true }))
+app.use(fileUpload({useTempFiles : true ,tempFileDir: '/tmp/'}))
 
 //Routes
 const upload = require('./routes/fileRoutes.js')
